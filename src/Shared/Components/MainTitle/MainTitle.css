@@ -1,0 +1,36 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.title.center {
+    text-align: center;
+}
+
+.title.right {
+    text-align: right;
+}
+
+h2 {
+    display: inline-block;
+    position: relative;
+    color: #3D2C00;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    background-color: #3D2C00;
+    height: 6px;
+    width: 10%;
+    left: 50%;
+    bottom: -11px;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+h2:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+.accordion{
+    border: none !important;
+}
+.accordion-button{
+    font-size: 22px;
+    font-weight: 800;
+}
+.accordion-body{
+    font-size: 18px;
+    direction: rtl !important;
+}
+.questions,
+.accordion-button,
+.accordion-body
+{
+    background: #F3F4F6 !important;
+    direction: ltr;
+}
+.accordion-button{
+    direction: rtl;
+        text-align: right;
+        display: flex;
+        
+}
+.accordion-button::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+.arrow {
+    font-size: 18px;
+    transition: transform 0.35s ease-in-out;
+    transform-origin: center;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+    background-color: #F3F4F6 !important;
+    color: inherit;
+}
+.accordion-button {
+    border: none !important;
+}
+
+.accordion-item {
+    border: none !important;
+    background: #F3F4F6 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    border: none !important;
+}

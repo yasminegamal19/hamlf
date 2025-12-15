@@ -1,0 +1,16 @@
+.home{
+    background-color: #3D2C00;
+}
+.home img{
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .img2  {
+        display: none;
+    }
+    .img1,
+    .img3{
+        width: 80%;
+        margin: 25px 0;
+    }
+}

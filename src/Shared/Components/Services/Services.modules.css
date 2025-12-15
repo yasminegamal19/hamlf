@@ -1,0 +1,32 @@
+.services{
+    background-color: #F5EEDB;
+}
+.services h3,
+.departments h3{
+    font-size: 30px;
+    font-weight: 900;
+    color: #3D2C00;
+}
+.services h5,
+.tasks h5,
+.departments h5{
+    font-weight: bold;
+    font-size: 22px;
+}
+.services img{
+    width: 70%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+.services ul{
+    padding-right: 15px;
+}
+.services ul li{
+    font-weight: bold;
+    font-size: 20px;
+}
+.services .btn{
+    color: #eee;
+    background-color: #3D2C00;
+    margin-bottom: 25px;
+}

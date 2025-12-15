@@ -1,0 +1,18 @@
+.about-us img{
+    border-radius: 15px;
+    width: 60%;
+}
+.about-us p{
+    font-size: 23px;
+    font-weight: 900;
+}
+.about-us .btn {
+    color: #eee;
+    background-color: #3D2C00;
+font-size: 17px;
+}
+@media (max-width: 768px) {
+    .about-us img {
+        margin-bottom: 25px;
+    }
+}

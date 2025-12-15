@@ -1,0 +1,16 @@
+.pleading-item{
+    border: 1px solid #e4e3e2;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    height: 450px;
+}
+.pleading-item img{
+    border-radius: 10px;
+}
+.pleading-item p{
+    font-size: 14px;
+}
+.pleadings .btn{
+    color: #eee;
+    background-color: #3D2C00;
+}

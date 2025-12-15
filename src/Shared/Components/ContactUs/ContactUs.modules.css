@@ -1,0 +1,12 @@
+.contact-us{
+    background-color: #F5EEDB;
+}
+.contact-us img{
+    border-radius: 10px;
+}
+.contact-us .btn{
+    color: #eee;
+    background-color: #3D2C00;
+    border: none;
+    margin: 10px 0 15px 0;
+}

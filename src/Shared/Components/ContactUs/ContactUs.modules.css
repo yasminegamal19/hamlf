@@ -4,6 +4,13 @@
 .contact-us img{
     border-radius: 10px;
 }
+.contact-us h5{
+    font-size: 24px;
+    font-weight: bold;
+}
+.contact-us .form-label{
+    font-size: 20px;
+}
 .contact-us .btn{
     color: #eee;
     background-color: #3D2C00;

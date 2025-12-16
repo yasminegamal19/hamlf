@@ -7,8 +7,14 @@
 .pleading-item img{
     border-radius: 10px;
 }
+.pleading-item h5{
+    font-size: 20px;
+    font-weight: bold;
+}
 .pleading-item p{
-    font-size: 14px;
+    font-size: 16px;
+    color: #777676;
+    letter-spacing: 1.6;
 }
 .pleadings .btn{
     color: #eee;

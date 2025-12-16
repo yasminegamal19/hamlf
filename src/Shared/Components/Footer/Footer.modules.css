@@ -7,30 +7,34 @@
 }
 .footer ul li{
     list-style: none;
+    margin-bottom: 2px;
 }
-
 .footer p {
-    font-size: 14px;
+    font-size: 20px;
 }
-
 .footer h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 15px !important;
+    font-weight: bold;
 }
 .footer h6{
+    font-size: 22px;
+    font-weight: 700;
     margin-bottom: 15px !important;
 }
-
 .location i {
     font-size: 20px;
     margin: 0 15px;
 }
-
 .location h6 {
     font-size: 14px;
 }
-
 .location span {
-    font-size: 15px;
+    font-size: 18px;
+}
+.footer a{
+    text-decoration: none !important;
+    color: #eee;
+    font-size: 20px;
 }
 

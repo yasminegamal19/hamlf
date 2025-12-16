@@ -1,13 +1,10 @@
 body {
   direction: rtl;
-  font-family: 'Azer', sans-serif !important;
+  font-family: 'Azer' !important;
 }
 @font-face {
   font-family: 'Azer';
   src: url('../Fonts/alfont_com_29LT-Azer-Regular.otf') format('otf'),
     url('../Fonts/alfont_com_29LT-Azer-Regular.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 

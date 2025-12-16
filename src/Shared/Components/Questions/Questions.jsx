@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import './Questions.modules.css';
 import MainTitle from '../MainTitle/MainTitle';
-import CommonQuestion from './CommonQuestion';
 
 const Questions = ({title}) => {
   return (
@@ -26,7 +25,7 @@ const Questions = ({title}) => {
               </h3>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse"
+                class="accordion-collapse collapse show"
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
@@ -57,11 +56,11 @@ const Questions = ({title}) => {
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  a: "تتطلب دعوى الخلع تنازل الزوجة عن حقوقها المالية، مثل مؤخر
+                  تتطلب دعوى الخلع تنازل الزوجة عن حقوقها المالية، مثل مؤخر
                   الصداق والنفقة، وكذلك إرجاع مقدم الصداق للزوج. يجب على الزوجة
                   تقديم طلب رسمي للمحكمة مع توضيح أسباب استحالة استمرار الحياة
                   الزوجية، ولا يشترط موافقة الزوج على الخلع. تقيم المحكمة الدعوى
-                  بناءً على الشهادات والمستندات المقدمة.",
+                  بناءً على الشهادات والمستندات المقدمة.
                 </div>
               </div>
             </div>
@@ -164,11 +163,11 @@ const Questions = ({title}) => {
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  a: "تتطلب دعوى الخلع تنازل الزوجة عن حقوقها المالية، مثل مؤخر
+                  تتطلب دعوى الخلع تنازل الزوجة عن حقوقها المالية، مثل مؤخر
                   الصداق والنفقة، وكذلك إرجاع مقدم الصداق للزوج. يجب على الزوجة
                   تقديم طلب رسمي للمحكمة مع توضيح أسباب استحالة استمرار الحياة
                   الزوجية، ولا يشترط موافقة الزوج على الخلع. تقيم المحكمة الدعوى
-                  بناءً على الشهادات والمستندات المقدمة.",
+                  بناءً على الشهادات والمستندات المقدمة.
                 </div>
               </div>
             </div>

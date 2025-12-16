@@ -8,7 +8,7 @@ const ContactUs = () => {
       <div className="contact-us py-5" id="contact-us">
         <div className="container">
           <MainTitle title="تواصل معنا" />
-          <h5 className="my-5">
+          <h5 className="my-5 text-center">
             لا تتردد في التواصل معنا لحجز استشارة قانونية متخصصة تتناسب مع
             احتياجاتك الخاصة. فريقنا من المحامين الخبراء مستعد لتقديم المشورة
             القانونية المناسبة لك وتوفير الدعم اللازم في جميع القضايا القانونية.

@@ -120,11 +120,11 @@ const Questions = ({title}) => {
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button
-                  class="accordion-button"
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
-                  aria-expanded="true"
+                  aria-expanded="false"
                   aria-controls="collapseFive"
                 >
                   كيف يتم تسجيل شقة تمليك في الشهر العقاري؟

@@ -6,6 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "./i18n/i18n";
+
+// ..
+AOS.init({
+    duration: 1000,
+    once: true,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

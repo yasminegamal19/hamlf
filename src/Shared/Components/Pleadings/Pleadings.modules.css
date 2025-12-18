@@ -1,8 +1,9 @@
 .pleading-item{
     border: 1px solid #e4e3e2;
     border-radius: 10px;
-    padding-bottom: 50px;
-    height: 450px;
+    padding-bottom: 60px;
+    height: 100%;
+    position: relative;
 }
 .pleading-item img{
     border-radius: 10px;
@@ -19,4 +20,13 @@
 .pleadings .btn{
     color: #eee;
     background-color: #3D2C00;
+}
+.pleading-item .btn{
+    background-color: transparent;
+    color: black;
+    border-color: #e4e3e2;
+    position: absolute;
+    padding: 8px 15px;
+    bottom: 15px;
+        left: 15px;
 }

@@ -1,15 +1,22 @@
 import { memo, useState } from "react";
 import "./Navbar.modules.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+
+  const {t, i18n} = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className={`navbar navbar-expand-lg bg-body-tertiary ${
+          i18n.language === "ar" ? "lang-ar" : "lang-en"
+        }`}
+      >
         <div className="container">
           <Link className="navbar-brand" to="/" onClick={closeMenu}>
             <img src="/logo_main.webp" alt="logo" />
@@ -22,9 +29,15 @@ const Navbar = () => {
           <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="#">
-                  من نحن
-                </Link>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {t("navbar.about")}
+                </a>
                 <ul className="dropdown-menu">
                   <li>
                     <Link
@@ -32,7 +45,7 @@ const Navbar = () => {
                       to="/#about-us"
                       onClick={closeMenu}
                     >
-                      من نحن
+                      {t("navbar.about_us")}
                     </Link>
                   </li>
                   <li>
@@ -41,7 +54,7 @@ const Navbar = () => {
                       to="/about-routes#mission"
                       onClick={closeMenu}
                     >
-                      مهمتنا
+                      {t("navbar.mission")}
                     </Link>
                   </li>
                   <li>
@@ -50,7 +63,7 @@ const Navbar = () => {
                       to="/about-routes#vision"
                       onClick={closeMenu}
                     >
-                      رؤيتنا
+                      {t("navbar.vision")}
                     </Link>
                   </li>
                   <li>
@@ -59,7 +72,7 @@ const Navbar = () => {
                       to="/about-routes#future-aspirations"
                       onClick={closeMenu}
                     >
-                      تطلعاتنا المستقبلية
+                      {t("navbar.future_aspirations")}
                     </Link>
                   </li>
                   <li>
@@ -68,16 +81,22 @@ const Navbar = () => {
                       to="/about-routes#our-services"
                       onClick={closeMenu}
                     >
-                      خدماتنا
+                      {t("navbar.our_services")}{" "}
                     </Link>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="#">
-                  خدماتنا
-                </Link>
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {t("navbar.services")}{" "}
+                </a>
                 <ul className="dropdown-menu">
                   <li>
                     <Link
@@ -85,7 +104,7 @@ const Navbar = () => {
                       to="/#services"
                       onClick={closeMenu}
                     >
-                      خدماتنا
+                      {t("navbar.services")}{" "}
                     </Link>
                   </li>
                   <li>
@@ -94,7 +113,7 @@ const Navbar = () => {
                       to="/about-routes#our-services"
                       onClick={closeMenu}
                     >
-                      الخدمات القانونية
+                      {t("navbar.legal_services")}{" "}
                     </Link>
                   </li>
                   <li>
@@ -103,7 +122,7 @@ const Navbar = () => {
                       to="/#join-legal-training"
                       onClick={closeMenu}
                     >
-                      مركز التدريب القانوني
+                      {t("navbar.legal_training_center")}{" "}
                     </Link>
                   </li>
                   <li>
@@ -112,7 +131,7 @@ const Navbar = () => {
                       to="/#legal-publications"
                       onClick={closeMenu}
                     >
-                      الإصدارات القانونية
+                      {t("navbar.legal_publications")}{" "}
                     </Link>
                   </li>
                   <li>
@@ -121,7 +140,7 @@ const Navbar = () => {
                       to="/#find-employee"
                       onClick={closeMenu}
                     >
-                      ابحث عن موظف
+                      {t("navbar.find_employee")}{" "}
                     </Link>
                   </li>
                 </ul>
@@ -129,13 +148,13 @@ const Navbar = () => {
 
               <li className="nav-item">
                 <Link className="nav-link" to="/#pleadings" onClick={closeMenu}>
-                  المرافعات
+                  {t("navbar.pleadings")}{" "}
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="nav-link" to="/#questions" onClick={closeMenu}>
-                  الأسئلة الشائعة
+                  {t("navbar.faq")}{" "}
                 </Link>
               </li>
 
@@ -145,30 +164,37 @@ const Navbar = () => {
                   to="/#contact-us"
                   onClick={closeMenu}
                 >
-                  تواصل معنا
+                  {t("navbar.contact_us")}{" "}
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="dropdown">
+          <div className="dropdown language-dropdown">
             <button
-              className="btn btn-secondary dropdown-toggle"
+              className="btn btn-secondary  custom-toggle"
               type="button"
               data-bs-toggle="dropdown"
             >
-              العربية
+              <span>{i18n.language === "ar" ? "العربية" : "English"}</span>
+              <i className="bi bi-caret-down-fill mx"></i>{" "}
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
-                  العربية
-                </a>
+                <button
+                  className=" ar btn dropdown-item"
+                  onClick={() => i18n.changeLanguage("ar")}
+                >
+                  {t("navbar.language_ar")}{" "}
+                </button>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  English
-                </a>
+                <button
+                  className=" en btn dropdown-item"
+                  onClick={() => i18n.changeLanguage("en")}
+                >
+                  {t("navbar.language_en")}{" "}
+                </button>
               </li>
             </ul>
           </div>

@@ -1,89 +1,126 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import MainTitle from "../MainTitle/MainTitle";
 import "./ContactUs.modules.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Translation, useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const {t} = useTranslation();
+
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await axios.post(`${BASE_URL}contact_us`, {
+        name,
+        phone,
+        email,
+        message,
+      });
+
+      console.log(res.data);
+      toast.success(t("toast.success"));
+
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+      toast.error(t("toast.error"));
+    } finally {
+      setLoading(false); 
+    }
+  };
+
   return (
     <>
       <div className="contact-us py-5" id="contact-us">
         <div className="container">
-          <MainTitle title="تواصل معنا" />
-          <h5 className="my-5 text-center">
-            لا تتردد في التواصل معنا لحجز استشارة قانونية متخصصة تتناسب مع
-            احتياجاتك الخاصة. فريقنا من المحامين الخبراء مستعد لتقديم المشورة
-            القانونية المناسبة لك وتوفير الدعم اللازم في جميع القضايا القانونية.
-          </h5>
+          <MainTitle title={t("contact.title")} />
+          <h5 className="my-5 text-center">{t("contact.description")}</h5>
           <div className="row">
             <div className="col-xl-6">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div class=" col-xl-6 mb-3">
                     <label for="exampleInputEmail1" class="form-label">
-                      الاسم بالكامل{" "}
+                      {t("contact.form.name.label")}
                     </label>
                     <input
+                      required
                       type="text"
                       class="form-control"
                       id="exampleInputName1"
                       aria-describedby="emailHelp"
-                      placeholder="الاسم بالكامل"
+                      placeholder={t("contact.form.name.placeholder")}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div class=" col-xl-6 mb-3">
                     <label for="exampleInputEmail1" class="form-label">
-                      رقم الهاتف المحمول{" "}
+                      {t("contact.form.phone.label")}
                     </label>
                     <input
-                      type="text"
+                      type="number"
                       class="form-control"
                       id="exampleInputName1"
                       aria-describedby="emailHelp"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
                 </div>
                 <div className="row">
-                  <div class=" col-xl-6 mb-3">
+                  <div class=" col-12 mb-3">
                     <label for="exampleInputEmail1" class="form-label">
-                      العمر{" "}
+                      {t("contact.form.email.label")}{" "}
                     </label>
                     <input
-                      type="text"
+                      type="email"
+                      required
                       class="form-control"
-                      id="exampleInputName1"
+                      id="exampleInputEmail1"
                       aria-describedby="emailHelp"
-                      placeholder="العمر"
+                      placeholder={t("contact.form.email.placeholder")}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
-                  </div>
-                  <div class=" col-xl-6 mb-3">
-                    <label htmlFor="">مكان الاقامة</label>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>القاهرة</option>
-                      <option value="1">الجيزة</option>
-                      <option value="2">المنوفيه</option>
-                      <option value="3">الاسكندرية</option>
-                      <option value="4">الدقهلية</option>
-                      <option value="5">المنيا</option>
-                    </select>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">
-                    موضوع الاستشارة{" "}
+                    {t("contact.form.message.label")}
                   </label>
                   <textarea
+                    required
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
-                    placeholder="موضوع الاستشارة"
+                    placeholder={t("contact.form.message.placeholder")}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                 </div>
-                 <div className="text-start">
-                <button type="submit" class="btn btn-primary">
-                  ارسال
-                </button>
+                <div className="text-start">
+                  <button type="submit" class="btn btn-primary">
+                    {loading ? t("contact.form.loading") : t("contact.form.submit")}
+                  </button>
                 </div>
               </form>
             </div>

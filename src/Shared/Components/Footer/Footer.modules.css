@@ -13,12 +13,12 @@
     font-size: 20px;
 }
 .footer h5 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 15px !important;
     font-weight: bold;
 }
 .footer h6{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px !important;
 }
@@ -35,6 +35,5 @@
 .footer a{
     text-decoration: none !important;
     color: #eee;
-    font-size: 20px;
 }
 

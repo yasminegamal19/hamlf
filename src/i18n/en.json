@@ -1,0 +1,257 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "about_us": "About Us",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "future_aspirations": "Future Aspirations",
+    "our_services": "Our Services",
+    "services": "Services",
+    "legal_services": "Legal Services",
+    "legal_training_center": "Legal Training Center",
+    "legal_publications": "Legal Publications",
+    "find_employee": "Find Employee",
+    "pleadings": "Pleadings",
+    "faq": "FAQ",
+    "contact_us": "Contact Us",
+    "language_ar": "العربية",
+    "language_en": "English"
+  },
+  "about_Us": {
+    "title": "About Us",
+    "paragraph1": "We are a distinguished organization with a unique management style and achievements, working in the legal field.",
+    "paragraph2": "Through our activities, we provide all the needs of large and small economic entities and individuals in legal and economic support across various fields.",
+    "paragraph3": "This is achieved through a distinguished team of lawyers and consultants. We all work together to provide the best service to our clients in the legal field.",
+    "read_More": "Read More"
+  },
+  "services": {
+    "title": "Our Services",
+    "legal_services_title": "Legal Services:",
+    "legal_services_desc": "These services cover various legal sectors through a team of specialized experts, each in their field, who are the partners of the Professional Lawyer Foundation. These sectors include the following:",
+    "legal_services_list": [
+      "Contracts Department.",
+      "Arbitration Department.",
+      "Criminal Law Department.",
+      "Commercial Law Department.",
+      "Real Estate Law Department.",
+      "Labor Law Department.",
+      "Family Law Department.",
+      "Maritime and Aviation Law Department.",
+      "Administrative Law Department.",
+      "Administrative Affairs and General Licensing Department.",
+      "Commercial Registration, Trademarks and Intellectual Property Department.",
+      "Legal Training Department.",
+      "Accounting Department.",
+      "Publishing and Electronic Publications Department."
+    ],
+    "read_more": "Read More",
+    "legal_training_title": "Joining the Legal Training Center:",
+    "legal_training_desc": "This center is an educational institute established specifically by the foundation to train new lawyers and law students during school vacations, preparing them legally at a high level to obtain suitable job opportunities according to their different skills. The center is managed by a distinguished team of law professors and specialized lawyers, whose goal is to prepare a new generation of lawyers at a professional and scientific level that enables them to advance in their careers in Egypt both financially and morally. The center also provides students with appropriate employment opportunities in law offices and legal institutions, according to the results of their oral and written exams in terms of scientific and practical competence.",
+    "legal_publications_title": "Legal and Electronic Publications:",
+    "legal_publications_desc": "Preparation of various legal, accounting, and tax studies and research, publishing them through various means to enable others from law offices, accounting offices, and different economic entities and individuals to benefit from the knowledge, as well as various electronic programs that assist specialists in their field of work.",
+    "find_employee_title": "Find an Employee:",
+    "find_employee_desc": "This service is provided by the website to employers in Egypt or abroad who are looking for trained or untrained workers in all specialties, providing them and receiving CVs from employees through the website and offering the best qualifications for employers. The site also provides another service for employers, which is to conclude employment contracts between the employee and the employer and to receive employers from abroad to conduct interviews at the foundation to select suitable staff and act as the legal agent for foreign employers in this regard, according to the terms and conditions."
+  },
+  "questions": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "How can an ownership apartment be registered at the Real Estate Registry?",
+        "answer": "To register an ownership apartment, a notarized final sale contract, a real estate transactions certificate proving the seller’s ownership, and payment of legal fees are required. The application is submitted to the Real Estate Registry after reviewing the property and documents."
+      },
+      {
+        "question": "What are the legal conditions for filing a Khula lawsuit?",
+        "answer": "Filing a Khula lawsuit requires the wife to waive her financial rights such as deferred dowry and alimony, and to return the dowry advance to the husband. The wife must submit an official request explaining the impossibility of continuing marital life, and the husband’s consent is not required."
+      },
+      {
+        "question": "Can dowry and gifts be recovered after breaking the engagement?",
+        "answer": "Yes, under Egyptian law, the fiancé has the right to recover the dowry and gifts after breaking the engagement by filing a lawsuit and proving that the termination was beyond his control."
+      },
+      {
+        "question": "What documents are required to file an alimony lawsuit?",
+        "answer": "Required documents include a copy of the wife’s ID, a copy of the marriage certificate, children’s birth certificates if applicable, and any documents proving the husband’s income if available."
+      },
+      {
+        "question": "How long do family court cases usually take?",
+        "answer": "The duration of family court cases varies depending on the case type and circumstances, but on average they may take several months to over a year."
+      },
+      {
+        "question": "Is it possible to appeal court rulings?",
+        "answer": "Yes, court rulings can be appealed through appeal or cassation depending on the type of judgment and within the legally specified time limits."
+      },
+      {
+        "question": "What is the difference between a general power of attorney and a special power of attorney?",
+        "answer": "A general power of attorney allows broad legal actions, while a special power of attorney is limited to specific actions such as selling property or litigation."
+      },
+      {
+        "question": "Is the presence of the principal required when issuing a power of attorney?",
+        "answer": "Yes, the principal must be personally present at the notary office to verify identity and sign the power of attorney."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Feel free to contact us to book a specialized legal consultation tailored to your specific needs. Our team of experienced lawyers is ready to provide you with proper legal advice and full support in all legal matters.",
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Full Name"
+      },
+      "phone": {
+        "label": "Mobile Phone Number"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email"
+      },
+      "message": {
+        "label": "Consultation Subject",
+        "placeholder": "Consultation Subject"
+      },
+      "submit": "Send",
+      "loading": "Loading..."
+    },
+    "toast": {
+      "success": "Message sent successfully",
+      "error": "Something went wrong, please try again"
+    }
+  },
+  "footer": {
+    "company_name": "Hassan Abdel Moneim Law Firm & Legal Consultants",
+    "slogan": "We protect your rights with confidence and professionalism.",
+
+    "links": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "services": "Our Services",
+      "pleadings": "Pleadings",
+      "faq": "FAQs",
+      "contact": "Contact Us"
+    },
+
+    "social": {
+      "title": "Follow Us",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
+    },
+
+    "address_contact": {
+      "title": "Address & Contact",
+      "address_label": "Address",
+      "address": "48 Kasr El Nile St., Mostafa Kamel Square, Abdeen, Cairo, Egypt"
+    },
+
+    "contact": {
+      "title": "Contact",
+      "phone": "+20 120 855 5806",
+      "whatsapp": "+20 120 855 5806"
+    }
+  },
+  "departments": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Civil Law Department:",
+        "descriptions": [
+          "Handles civil cases including lawsuits, property disputes, contracts, compensation claims, eviction cases, and enforcement of judgments.",
+          "Also includes drafting appeals before the Court of Cassation and representing clients in court."
+        ]
+      },
+      {
+        "title": "Contracts Department:",
+        "descriptions": [
+          "Specializes in drafting, reviewing, and preparing all types of contracts including real estate, installment sales, leases, mortgages, commercial contracts, and legal agreements."
+        ]
+      },
+      {
+        "title": "Arbitration Department:",
+        "descriptions": [
+          "Handles local and international arbitration cases and represents clients as arbitrators or legal counsel."
+        ]
+      },
+      {
+        "title": "Criminal Law Department:",
+        "descriptions": [
+          "Defends clients in criminal cases including major crimes such as drug trafficking, murder, bribery, and fraud.",
+          "Also handles military court cases and debt collection cases."
+        ]
+      },
+      {
+        "title": "Commercial & Tax Law Department:",
+        "descriptions": [
+          "Handles commercial disputes, bankruptcy cases, financial restructuring, company formation, and tax disputes."
+        ]
+      },
+      {
+        "title": "Real Estate & Tourism Law Department:",
+        "descriptions": [
+          "Specializes in property transactions, title registration, building permits, and real estate investment, including tourism facilities registration."
+        ]
+      },
+      {
+        "title": "Labor Law Department:",
+        "descriptions": [
+          "Represents clients in labor disputes, employment contracts, salaries, benefits, social insurance, and workers’ rights."
+        ]
+      },
+      {
+        "title": "Family Law Department:",
+        "descriptions": [
+          "Handles divorce, alimony, custody, inheritance, and family dispute resolution."
+        ]
+      },
+      {
+        "title": "Maritime & Aviation Law Department:",
+        "descriptions": [
+          "Handles vessel and aircraft registration, accidents, compensation claims, and maritime and aviation disputes."
+        ]
+      },
+      {
+        "title": "Administrative Law Department:",
+        "descriptions": [
+          "Represents clients before administrative courts in nationality disputes, administrative appeals, and challenges against governmental decisions."
+        ]
+      },
+      {
+        "title": "Administrative Affairs & Licensing Department:",
+        "descriptions": [
+          "Assists in obtaining and renewing licenses, residence permits for foreigners, and dealing with governmental authorities."
+        ]
+      },
+      {
+        "title": "Commercial Registration, Trademarks & IP Protection:",
+        "descriptions": [
+          "Handles trademark registration, patents, and intellectual property protection locally and internationally."
+        ]
+      },
+      {
+        "title": "Legal Training Department:",
+        "descriptions": [
+          "Provides professional legal training for junior lawyers in litigation, contract drafting, and legal research."
+        ]
+      },
+      {
+        "title": "Publishing Department (Print & Digital):",
+        "descriptions": [
+          "Publishes legal, financial, and tax research and provides printing and digital publishing services."
+        ]
+      }
+    ]
+  },
+  "tasks": {
+    "mission": {
+      "title": "Our Mission",
+      "text": "All members of our firm work as one team to provide the best legal services to our clients through our specialized departments, managed by experienced lawyers and consultants, delivering high-quality legal services at fair and reasonable costs."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text1": "We believe that institutional legal work is the most effective model for serving clients. The era of individual practice has ended, allowing clients—especially business entities of all sizes—to benefit from an integrated legal defense system that protects their interests, assets, and investments.",
+      "text2": "We have also established flexible financial systems for legal and advisory services, tailored according to the scope of services and the field required, whether legal, economic, or both. These systems include annual retainers or case-by-case evaluations."
+    },
+    "future": {
+      "title": "Our Future Aspirations",
+      "text": "Given the nature and importance of our responsibilities toward our clients, we aspire to be one of the leading legal institutions in Egypt and the Arab world, expanding our client base and becoming a strategic partner in their continued success through a dedicated and professional legal team."
+    }
+  }
+}

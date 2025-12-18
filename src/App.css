@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 body {
-  direction: rtl;
-  font-family: 'Azer' !important;
+  font-family: "Cairo", sans-serif !important;
 }
-@font-face {
-  font-family: 'Azer';
-  src: url('../Fonts/alfont_com_29LT-Azer-Regular.otf') format('otf'),
-    url('../Fonts/alfont_com_29LT-Azer-Regular.otf') format('otf');
+.rtl {
+  text-align: right;
+}
+
+.ltr {
+  text-align: left;
 }
 

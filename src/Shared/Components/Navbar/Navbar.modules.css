@@ -12,9 +12,11 @@
     flex-direction: column;
     align-content: space-between;
 }
-.navbar .navbar-toggler{
+
+.navbar .navbar-toggler {
     border: none !important;
 }
+
 .navbar .nav-link {
     color: #eee !important;
     font-size: 20px;
@@ -26,8 +28,28 @@
     color: #000;
     padding: 8px 22px;
 }
+.navbar .btn-secondary{
+}
+.navbar .ar,
+.navbar .en{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+.lang-ar .dropdown-menu .dropdown-item{
+    text-align: right;
+}
+.lang-en .dropdown-menu .dropdown-item {
+    text-align: left;
+}
+.dropdown-menu .dropdown-item {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
 
-.navbar .dropdown-toggle::after {
+/* .navbar .dropdown-toggle::after {
     margin-right: 20px !important;
 }
 
@@ -53,7 +75,8 @@
 
 .dropdown-menu .dropdown-item:hover {
     background-color: #f5f5f5;
-}
+} */
+
 @media (max-width: 768px) {
     .navbar-toggler {
         order: 2;
@@ -64,27 +87,28 @@
         margin-left: auto;
         margin-right: 10px;
     }
-        .mobile-menu {
-            position: fixed;
-            top: 110px;
-            left: -100%;
-            width: 100%;
-            height: calc(100% - 110px);
-            background-color: #3D2C00;
-            padding: 20px;
-            transition: left 0.3s ease;
-            z-index: 9999;
-            display: block !important;
-        }
-    
-        .mobile-menu.show {
-            left: 0;
-        }
-    
-        .mobile-menu .navbar-nav {
-            display: flex;
-            flex-direction: column;
-            margin-top: 80px;
-            gap: 20px;
-        }
+
+    .mobile-menu {
+        position: fixed;
+        top: 110px;
+        left: -100%;
+        width: 100%;
+        height: calc(100% - 110px);
+        background-color: #3D2C00;
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 9999;
+        display: block !important;
+    }
+
+    .mobile-menu.show {
+        left: 0;
+    }
+
+    .mobile-menu .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        gap: 20px;
+    }
 }

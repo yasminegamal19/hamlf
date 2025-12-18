@@ -9,6 +9,7 @@ const Departments = () => {
   const departments = t("departments.items", { returnObjects: true });
 
   return (
+    
     <div className="departments py-5" id="our-services">
       <div className="container">
         <MainTitle title={t("departments.title")} />

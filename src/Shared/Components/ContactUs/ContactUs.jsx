@@ -1,51 +1,77 @@
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 import MainTitle from "../MainTitle/MainTitle";
 import "./ContactUs.modules.css";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Translation, useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { sendContact, resetContactState } from "../../Redux/Slices/ContactSlice";
 
 const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
+  const { isLoading, success, error } = useSelector((state) => state.contact);
 
-  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const [formdata, setformdata] = useState({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
 
-  const handleSubmit = async (e) => {
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setformdata((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    };
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   dispatch(
+  //     sendContact({
+  //       name,
+  //       phone,
+  //       email,
+  //       message,
+  //     })
+  //   );
+  //    console.log(name , phone, email, message);
+  // };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    try {
-      const res = await axios.post(`${BASE_URL}contact_us`, {
-        name,
-        phone,
-        email,
-        message,
-      });
-
-      console.log(res.data);
-      toast.success(t("toast.success"));
-
-      setName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
-
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-      toast.error(t("toast.error"));
-    } finally {
-      setLoading(false); 
-    }
+    dispatch(sendContact(formdata));
+    console.log(formdata)
   };
+
+    
+ 
+    useEffect(() => {
+      if (success) {
+        toast.success(t("contact.toast.success"));
+
+        setformdata({
+          name: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+        dispatch(resetContactState());
+        navigate("/");
+      }
+
+      if (error) {
+        toast.error(t("contact.toast.error"));
+        dispatch(resetContactState());
+      }
+    }, [success, error, dispatch, navigate, t]);
 
   return (
     <>
@@ -64,12 +90,13 @@ const ContactUs = () => {
                     <input
                       required
                       type="text"
+                      name="name"
                       class="form-control"
                       id="exampleInputName1"
                       aria-describedby="emailHelp"
                       placeholder={t("contact.form.name.placeholder")}
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      value={formdata.name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div class=" col-xl-6 mb-3">
@@ -78,11 +105,12 @@ const ContactUs = () => {
                     </label>
                     <input
                       type="number"
+                      name="phone"
                       class="form-control"
                       id="exampleInputName1"
                       aria-describedby="emailHelp"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      value={formdata.phone}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -93,13 +121,14 @@ const ContactUs = () => {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       required
                       class="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder={t("contact.form.email.placeholder")}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={formdata.email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -109,17 +138,20 @@ const ContactUs = () => {
                   </label>
                   <textarea
                     required
+                    name="message"
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     placeholder={t("contact.form.message.placeholder")}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    value={formdata.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
                 <div className="text-start">
                   <button type="submit" class="btn btn-primary">
-                    {loading ? t("contact.form.loading") : t("contact.form.submit")}
+                    {isLoading
+                      ? t("contact.form.loading")
+                      : t("contact.form.submit")}
                   </button>
                 </div>
               </form>

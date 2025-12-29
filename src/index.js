@@ -7,7 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./i18n/i18n";
-
+import store from './Shared/Redux/store';
+import { Provider } from 'react-redux';
 // ..
 AOS.init({
     duration: 1000,
@@ -17,7 +18,9 @@ AOS.init({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
     </BrowserRouter>
 );
 

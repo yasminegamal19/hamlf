@@ -4,23 +4,21 @@ import PleadingItem from "./PleadingItem";
 import MainTitle from "../MainTitle/MainTitle";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPleadings } from "../../Redux/Slices/PleadingsSlice";
 
 const Pleadings = () => {
   const {i18n} = useTranslation();
-  const [pleadings, setPleadings] = useState([]);
-  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const dispatch = useDispatch();
+  const { pleadings, isLoading, error } = useSelector(
+    (state) => state.pleadings
+  );
 
+console.log(pleadings);
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}get_pleadings?limit=4`, {
-        headers: {
-          "Accept-Language": i18n.language,
-        },
-      })
-      .then((res) => {
-        setPleadings(res.data.data.data);
-      });
-  }, [i18n.language,BASE_URL]);
+    dispatch(fetchPleadings({ page: 1 }));
+  }, [dispatch, i18n.language]);
+
 
   return (
     <div className="pleadings py-5 px-3" id="pleadings">

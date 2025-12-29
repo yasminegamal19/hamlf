@@ -10,7 +10,7 @@ const PleadingItem = ({ data }) => {
       <div className="pleading-item">
         <div className="pleading-data px-3">
           <div className="img py-3 px-3">
-            <img src={data?.image} alt="" />
+            <img src={data?.image} alt=""/>
           </div>
           <h5>{data?.title}</h5>
           <p>{data?.description}</p>

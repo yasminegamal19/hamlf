@@ -113,7 +113,7 @@
       "loading": "Loading..."
     },
     "toast": {
-      "success": "Message sent successfully",
+      "success": "Data sent successfully",
       "error": "Something went wrong, please try again"
     }
   },

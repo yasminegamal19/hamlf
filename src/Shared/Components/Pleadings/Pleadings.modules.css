@@ -7,11 +7,13 @@
 }
 .pleading-item img{
     border-radius: 10px;
+    width: 100%;
 }
 .pleading-item h5{
     font-size: 20px;
     font-weight: bold;
 }
+
 .pleading-item p{
     font-size: 16px;
     color: #777676;

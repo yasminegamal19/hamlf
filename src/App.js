@@ -20,6 +20,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AllPleadings from './Shared/Components/AllPleadings/AllPleadings';
 import Scroll from './Shared/Components/Scroll/Scroll';
+import Terms from './Shared/Components/Terms/Terms';
+import Privacy from './Shared/Components/Privacy/Privacy';
 
 
 function App() {
@@ -36,12 +38,14 @@ const {t, i18n } = useTranslation();
     <div className="App">
       <Navbar />
       <Routes>
-         <Route path='/' element={<Layouts />} /> 
-      <Route path='/about-routes' element={<AboutRoutes />}/>
-      <Route path="/pleadings" element={<AllPleadings />} />
+        <Route path="/" element={<Layouts />} />
+        <Route path="/about-routes" element={<AboutRoutes />} />
+        <Route path="/pleadings" element={<AllPleadings />} />
+        <Route path="/terms-routes" element={<Terms />} />
+        <Route path="/privacy-routes" element={<Privacy />} />
       </Routes>
       <Footer />
-      <ToastContainer  position='top-right' autoClose={1000}/>
+      <ToastContainer position="top-right" autoClose={1000} />
       <Scroll />
     </div>
   );

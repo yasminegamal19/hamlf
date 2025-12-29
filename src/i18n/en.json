@@ -15,6 +15,53 @@
     "pleadings": "Pleadings",
     "faq": "FAQ",
     "contact_us": "Contact Us",
+  "terms": {
+    "title": "Terms & Conditions",
+    "subtitle": "Website Use Agreement",
+    "intro": "Using the organization’s website constitutes full acceptance of these terms and conditions. If you do not agree, you must stop using the website immediately.",
+
+    "access_title": "First: Website Access",
+    "access_text": "Users are responsible for providing the necessary requirements to access the website. The organization reserves the right to modify or suspend the website or any of its services or content at any time without prior notice.",
+
+    "services_title": "Second: Content and Services",
+    "services_text": "The website provides legal and economic content and services for informational and service purposes only and does not replace professional legal consultation unless agreed upon in writing.",
+
+    "intellectual_title": "Third: Intellectual Property Rights",
+    "intellectual_text": "All website content is exclusively owned by the organization and protected by intellectual property laws. Use is permitted for personal and non-commercial purposes only.",
+
+    "user_title": "Fourth: User Obligations",
+    "user_text": "Users must use the website lawfully and must not provide misleading information or cause harm to the website or other users.",
+
+    "liability_title": "Fifth: Limitation of Liability",
+    "liability_text": "The organization shall not be liable for any damages resulting from the use of the website or reliance on its content.",
+
+    "law_title": "Sixth: Amendments and Governing Law",
+    "law_text": "The organization may amend these terms at any time. These terms are governed by applicable laws."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Data Protection and Privacy",
+
+    "intro": "The organization is committed to respecting users’ privacy and protecting their personal data in accordance with this policy.",
+
+    "collection_title": "First: Data Collection",
+  "collection_text": "The organization may collect certain personal data voluntarily provided by users when using the website or contacting us, such as name and contact details.",
+
+  "usage_title": "Second: Use of Data",
+  "usage_text": "Personal data is used to provide services, communicate with users, and improve service quality.",
+
+  "protection_title": "Third: Data Protection",
+  "protection_text": "Appropriate technical and organizational measures are applied to protect personal data from unauthorized access, use, or disclosure.",
+
+  "sharing_title": "Fourth: Data Sharing",
+  "sharing_text": "Personal data is not shared with third parties except as required by law or when necessary to provide the service.",
+
+  "rights_title": "Fifth: User Rights",
+  "rights_text": "Users have the right to request access to, correction of, or deletion of their personal data in accordance with applicable regulations.",
+
+  "updates_title": "Sixth: Policy Updates",
+  "updates_text": "The organization reserves the right to update this privacy policy at any time. Continued use of the website constitutes acceptance of such updates."
+  },
     "language_ar": "العربية",
     "language_en": "English"
   },

@@ -37,6 +37,12 @@ const Footer = () => {
                   <li>
                     <a href="#contact-us"> {t("footer.links.contact")} </a>
                   </li>{" "}
+                  <li>
+                    <a href="/terms-routes#terms"> {t("navbar.terms.title")}</a>
+                  </li>
+                  <li>
+                    <a href="/privacy-routes#privacy"> {t("navbar.privacy.title")}</a>
+                  </li>
                 </ul>
               </div>
               <div className="col-xl-3 col-12 ">

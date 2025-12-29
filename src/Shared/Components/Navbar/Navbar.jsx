@@ -1,21 +1,38 @@
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 import "./Navbar.modules.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <nav
         className={`navbar navbar-expand-lg bg-body-tertiary ${
           i18n.language === "ar" ? "lang-ar" : "lang-en"
-        }`}
+        } ${isSticky ? "sticky" : ""}`}
       >
         <div className="container">
           <Link className="navbar-brand" to="/" onClick={closeMenu}>
@@ -27,6 +44,12 @@ const Navbar = () => {
           </button>
 
           <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+            <button
+              className="close-mobile-menu"
+              onClick={toggleMenu} 
+            >
+              ×
+            </button>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <a
@@ -165,6 +188,24 @@ const Navbar = () => {
                   onClick={closeMenu}
                 >
                   {t("navbar.contact_us")}{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  to="/terms-routes"
+                  onClick={closeMenu}
+                >
+                  {t("navbar.terms.title")}{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  to="/privacy-routes"
+                  onClick={closeMenu}
+                >
+                  {t("navbar.privacy.title")}{" "}
                 </Link>
               </li>
             </ul>

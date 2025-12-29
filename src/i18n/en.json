@@ -53,6 +53,10 @@
     "find_employee_title": "Find an Employee:",
     "find_employee_desc": "This service is provided by the website to employers in Egypt or abroad who are looking for trained or untrained workers in all specialties, providing them and receiving CVs from employees through the website and offering the best qualifications for employers. The site also provides another service for employers, which is to conclude employment contracts between the employee and the employer and to receive employers from abroad to conduct interviews at the foundation to select suitable staff and act as the legal agent for foreign employers in this regard, according to the terms and conditions."
   },
+  "pleadings": {
+    "title": "Pleadings",
+    "read_More": "More Pleadings"
+  },
   "questions": {
     "title": "Frequently Asked Questions",
     "faqs": [

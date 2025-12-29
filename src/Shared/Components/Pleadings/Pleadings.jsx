@@ -8,22 +8,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchPleadings } from "../../Redux/Slices/PleadingsSlice";
 
 const Pleadings = () => {
-  const {i18n} = useTranslation();
+  const { i18n, t } = useTranslation();
   const dispatch = useDispatch();
   const { pleadings, isLoading, error } = useSelector(
     (state) => state.pleadings
   );
 
-console.log(pleadings);
+  console.log(pleadings);
   useEffect(() => {
     dispatch(fetchPleadings({ page: 1 }));
   }, [dispatch, i18n.language]);
 
-
   return (
     <div className="pleadings py-5 px-3" id="pleadings">
       <div className="container">
-        <MainTitle title="المرافعات" />
+        <MainTitle title={t("pleadings.title")} />
         <div className="row mb-4">
           {pleadings.map((item) => (
             <PleadingItem key={item.id} data={item} />
@@ -32,7 +31,7 @@ console.log(pleadings);
 
         <div className="text-center mt-4">
           <Link to="/pleadings" className="btn">
-            المزيد من المرافعات
+            {t("pleadings.read_More")}{" "}
           </Link>
         </div>
       </div>
